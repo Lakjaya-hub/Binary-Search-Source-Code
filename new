@@ -1,0 +1,39 @@
+#include<stdio.h>
+int binarySearch(int value,int size,int array[])
+{
+    int first=0,last=(size-1),middle=0,position=-1,found=0;
+
+    while (!found && (first <= last))
+    {
+      middle=(first+last)/2;
+      if (array[middle] == value)
+    {
+         found = 1;
+         position = middle+1;
+    }
+      else if (array[middle] > value)
+         last = middle - 1;
+     else
+     first = middle + 1;
+    }
+
+   return (position);
+
+}
+int main()
+{
+    int value,size,x;
+    printf("ENTER VALUE  ");
+    scanf("%d",&value);
+    printf("ENTER SIZE   ");
+    scanf("%d",&size);
+    int array[size];
+    for(x=0;x<size;x++)
+    {
+        printf("ENTER ELEMENT ");
+        scanf("%d",&array[x]);
+
+    }
+    int pos=binarySearch(value,size,array);
+    printf(" position is %d",pos);
+}
