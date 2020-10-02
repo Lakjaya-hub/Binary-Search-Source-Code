@@ -23,9 +23,9 @@ int binarySearch(int value,int size,int array[])
 int main()
 {
     int value,size,x;
-    printf("ENTER VALUE  ");
+    printf("ENTER VALUE : ");
     scanf("%d",&value);
-    printf("ENTER SIZE   ");
+    printf("ENTER SIZE  : ");
     scanf("%d",&size);
     int array[size];
     for(x=0;x<size;x++)
